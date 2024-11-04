@@ -42,7 +42,7 @@ eval $(minikube docker-env -u)
 # 6. Apply Kubernetes configurations
 echo "Applying Kubernetes configurations..."
 kubectl apply -f postgres-deployment.yaml
-kubectl apply -f flask-deployment.yaml
+envsubst < flask-deployment.yaml | kubectl apply -f -
 
 # Wait for PostgreSQL pod to be ready
 echo "Waiting for PostgreSQL pod to be ready..."
