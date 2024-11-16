@@ -6,7 +6,7 @@ The flask app is then made available and shows the distribution of requests (sto
 
 ## Usage
 
-- Install Docker, `kubectl`, and `minikube`
+- Install Docker, `kubectl`, `minikube`, and `psql`
 - Start Docker
 - `./run.sh`
 
