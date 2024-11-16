@@ -9,5 +9,6 @@ The flask app is then made available and shows the distribution of requests (sto
 - Install Docker, `kubectl`, `minikube`, and `psql`
 - Start Docker
 - `./run.sh`
+- Optionally, `./expose.sh` to relay the host machine's port 80 to the flask-service in the minikube cluster
 
 When shutting down, exit the running script and then run `minikube stop` or `minikube delete` (if you'd like to prevent the cluster from retaining its state for the next `minikube start`).
