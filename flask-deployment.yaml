@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: ${DOCKER_USERNAME}/testing-kube-flask-app-image:latest
+        image: sahilng/testing-kube-flask-app-image:latest
         ports:
         - containerPort: 5000
         env:

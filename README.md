@@ -8,7 +8,6 @@ The flask app is then made available and shows the distribution of requests (sto
 
 - Install Docker, `kubectl`, and `minikube`
 - Start Docker
-- Create `.env` using `.env.example`
 - `./run.sh`
 
 When shutting down, exit the running script and then run `minikube stop` or `minikube delete` (if you'd like to prevent the cluster from retaining its state for the next `minikube start`).
