@@ -19,14 +19,14 @@ kubectl wait --for=condition=ready pod -l app=postgres --timeout=120s
 # Wait a few seconds for service to be ready
 sleep 5
 
-# 7. Port-forward to access PostgreSQL locally
+# Port-forward to access PostgreSQL locally
 echo "Port-forwarding PostgreSQL service to local port 5432..."
 kubectl port-forward svc/postgres-service 5432:5432 &
 
 # Wait a few seconds for port-forwarding to take effect
 sleep 5
 
-# 8. Create the `pod_requests` table in PostgreSQL
+# Create the `pod_requests` table in PostgreSQL
 echo "Creating pod_requests table in PostgreSQL..."
 psql -h localhost -U yourusername -d yourdb << EOF
 CREATE TABLE IF NOT EXISTS pod_requests (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS pod_requests (
 );
 EOF
 
-# 9. Verify that the Flask app pods are running
+# Verify that the Flask app pods are running
 echo "Waiting for Flask app pods to be ready..."
 kubectl wait --for=condition=ready pod -l app=flask --timeout=120s
 
