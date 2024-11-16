@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# 1. Start Minikube
+# Start Minikube
 echo "Starting Minikube..."
 minikube start --driver=docker
 
-# 6. Apply Kubernetes configurations
+# Apply Kubernetes configurations
 echo "Applying Kubernetes configurations..."
 kubectl apply -f postgres-deployment.yaml
 kubectl apply -f flask-deployment.yaml
