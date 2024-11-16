@@ -16,7 +16,7 @@ if [ -z "$DOCKER_USERNAME" ]; then
     exit 1
 fi
 
-IMAGE_NAME="flask-app-image"
+IMAGE_NAME="testing-kube-flask-app-image"
 NAMESPACE="default"
 
 # 1. Start Minikube
