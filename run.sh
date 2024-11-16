@@ -9,7 +9,7 @@ echo "Applying Kubernetes configurations..."
 kubectl apply -f postgres-deployment.yaml
 kubectl apply -f flask-deployment.yaml
 
-# Wait a few seconds for service to be ready
+# Wait a few seconds for the above to complete
 sleep 5
 
 # Wait for PostgreSQL pod to be ready
