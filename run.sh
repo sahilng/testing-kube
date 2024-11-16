@@ -9,9 +9,15 @@ echo "Applying Kubernetes configurations..."
 kubectl apply -f postgres-deployment.yaml
 kubectl apply -f flask-deployment.yaml
 
+# Wait a few seconds for service to be ready
+sleep 5
+
 # Wait for PostgreSQL pod to be ready
 echo "Waiting for PostgreSQL pod to be ready..."
 kubectl wait --for=condition=ready pod -l app=postgres --timeout=120s
+
+# Wait a few seconds for service to be ready
+sleep 5
 
 # 7. Port-forward to access PostgreSQL locally
 echo "Port-forwarding PostgreSQL service to local port 5432..."
