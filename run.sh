@@ -1,8 +1,5 @@
 #!/bin/bash
 
-IMAGE_NAME="testing-kube-flask-app-image"
-NAMESPACE="default"
-
 # 1. Start Minikube
 echo "Starting Minikube..."
 minikube start --driver=docker
@@ -39,7 +36,7 @@ kubectl wait --for=condition=ready pod -l app=flask --timeout=120s
 
 # Display the status of all resources
 echo "Setup complete. Displaying status of resources:"
-kubectl get all -n $NAMESPACE
+kubectl get all -n default
 
 # Show Minikube service URL for the Flask app
 echo "Access the Flask app at the following URL:"
